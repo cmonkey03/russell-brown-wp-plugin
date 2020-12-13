@@ -1,11 +1,9 @@
 <?php
-
 /**
  * Register Connect Custom Post Types
  * 
  * @package Wpplugin
- * 
- * @return null
+ * @return  null
  */
 function Create_Custom_Post_types()
 {
@@ -20,7 +18,7 @@ function Create_Custom_Post_types()
             ),
         'menu_icon' => 'dashicons-calendar',
         'hierarchical' => false,
-        'taxonomies' => $taxonomies,
+        // 'taxonomies' => $taxonomies,
         'capability_type' => 'post',
         'has_archive' => true,
         'rewrite' => array('slug' => 'articles'),
