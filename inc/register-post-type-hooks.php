@@ -3,7 +3,6 @@
  * Register Connect Custom Post Types
  * 
  * @package Wpplugin
- * @return  null
  */
 function Create_Custom_Post_types()
 {
@@ -18,7 +17,6 @@ function Create_Custom_Post_types()
             ),
         'menu_icon' => 'dashicons-calendar',
         'hierarchical' => false,
-        // 'taxonomies' => $taxonomies,
         'capability_type' => 'post',
         'has_archive' => true,
         'rewrite' => array('slug' => 'articles'),
@@ -27,6 +25,7 @@ function Create_Custom_Post_types()
         'show_in_admin_bar' => true,
         'show_ui' => true,
         'show_in_rest' => true,
+        'supports' => array('title', 'editor')
         )
     );
 }
