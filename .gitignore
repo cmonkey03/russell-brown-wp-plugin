@@ -1,0 +1,6 @@
+.DS_Store
+
+# Ignore Composer/PHPCodeSniffer
+vendor
+composer.lock
+composer.phar
