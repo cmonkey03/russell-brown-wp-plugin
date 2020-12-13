@@ -40,7 +40,7 @@ edit settings.json:
 {
     "window.zoomLevel": 0,
     "phpcs.autoConfigSearch": false,
-    "phpcs.executablePath": "./vendor/bin/phpcs",
+    "phpcs.executablePath": "./wp-app/wp-content/plugins/russell-brown-wp-plugin/vendor/bin/phpcs",
     "phpcs.enable": true,
 }
 ```
