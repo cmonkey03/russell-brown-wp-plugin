@@ -4,6 +4,10 @@
  * 
  * The Metabox styling will not matche Gutenberg
  * See: https://github.com/WordPress/gutenberg/issues/12101
+ */
+
+/**
+ * Create the Short Title input field
  * 
  * @param object $post    The post
  * @param array  $metabox The metabox arguments
@@ -81,3 +85,33 @@ function Add_Save_Short_Title_meta( int $post_id, object $post )
     }   
 }
 add_action('save_post', 'Add_Save_Short_Title_meta', 10, 2);
+
+/**
+ * Get the Postmeta for the WP API
+ * 
+ * @param array $post An array of properties for the Post
+ * 
+ * @return array $postmeta Return the postmeta for the post
+ */
+function Get_Post_Meta_For_api( array $post) : array
+{
+    $post_id = $post['id'];
+
+    return get_post_meta($post_id);
+}
+
+/**
+ * Callback to register postmeta for the Post
+ */
+function Create_Api_Posts_Meta_field()
+{
+    register_rest_field(
+        'articles',
+        'article_short_title',
+        array(
+            'get_callback' => 'Get_Post_Meta_For_api',
+            'schema' => null,
+        )
+    );
+}
+add_action('rest_api_init', 'Create_Api_Posts_Meta_field');
