@@ -1,8 +1,8 @@
 <?php
 /**
- * Add the Short Title input filed to Metabox
+ * Add the Short Title to Articles Custom Post Type
  * 
- * The Metabox styling will not matche Gutenberg
+ * The Metabox styling will not match Gutenberg
  * See: https://github.com/WordPress/gutenberg/issues/12101
  */
 
