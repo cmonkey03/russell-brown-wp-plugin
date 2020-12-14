@@ -1,4 +1,5 @@
 # PRACTICE WORDPRESS PLUGIN
+This is an example plugin built for practice purposes.
 
 ## INSTRUCTIONS TO BUILD THIS PLUGIN
 - Your repository should include a well organized and detailed README.md file which explains what the plugin does and any special instructions that users would need to install and/or use the plugin.
@@ -18,9 +19,10 @@
 $ cd /wp-app/wp-content/plugins
 $ git submodule add https://github.com/cmonkey03/russell-brown-wp-plugin
 ```
+3. Enable plugin via Plugins dasbhoard, or [via code](https://wpvip.com/functions/wpcom_vip_load_plugin/)
 
 ### TO INSTALL LOCAL PHP CODESNIFFER
-Add PHP Codesniffer to check for WPVIP code standards.
+Add PHP Codesniffer to check for the code standards of your choice, such as WPVIP.
 
 #### INSTALL COMPOSER ON PROJECT
 [Install Composer](https://getcomposer.org/download/)
